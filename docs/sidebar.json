@@ -1,10 +1,10 @@
 {
-  "Notebook": {
-    "Export to modules": "/export",
-    "Convert to html": "/export2html",
-    "Show doc": "/showdoc",
-    "Test functions": "/test",
-    "Core functions": "/core",
-    "Command line functions": "/cli"
+  "divinepy": {
+    "Overview": "/",
+    "Core reading utils": "core.html",
+    "Title": "dems.html",
+    "`divdata` tools": "divdata.html",
+    "L2 Data Interface": "l2data.html",
+    "L3 Data": "l3data.html"
   }
 }

@@ -7,24 +7,24 @@ entries:
 - folders:
   - folderitems:
     - output: web,pdf
-      title: Export to modules
-      url: /export.html
+      title: Overview
+      url: /
     - output: web,pdf
-      title: Convert to html
-      url: /export2html.html
+      title: Core reading utils
+      url: core.html
     - output: web,pdf
-      title: Show doc
-      url: /showdoc.html
+      title: Title
+      url: dems.html
     - output: web,pdf
-      title: Test functions
-      url: /test.html
+      title: '`divdata` tools'
+      url: divdata.html
     - output: web,pdf
-      title: Core functions
-      url: /core.html
+      title: L2 Data Interface
+      url: l2data.html
     - output: web,pdf
-      title: Command line functions
-      url: /cli.html
+      title: L3 Data
+      url: l3data.html
     output: web
-    title: Notebook
+    title: divinepy
   output: web
   title: Sidebar
