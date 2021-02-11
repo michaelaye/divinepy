@@ -2,13 +2,16 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"root": "04_l3data.ipynb",
-         "raster_to_xarray": "00_core.ipynb",
+index = {"raster_to_xarray": "00_core.ipynb",
          "mapcycle_to_xarray": "00_core.ipynb",
          "read_images_into_stacked_array": "00_core.ipynb",
+         "read_mapcycles_into_stacked_array": "00_core.ipynb",
          "get_data_for_pixel": "00_core.ipynb",
-         "LOLA_DEM": "01_dems.ipynb",
+         "LOLA_TOPO": "01_dems.ipynb",
+         "t_prime": "01_dems.ipynb",
+         "lat_prime": "01_dems.ipynb",
          "DIVINER_URL": "04_l3data.ipynb",
+         "root": "04_l3data.ipynb",
          "L2DataManager": "03_l2data.ipynb",
          "get_l2_image_paths": "03_l2data.ipynb",
          "L2Data": "03_l2data.ipynb",
