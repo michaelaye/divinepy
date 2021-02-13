@@ -13,8 +13,11 @@ entries:
       title: Core reading utils
       url: core.html
     - output: web,pdf
-      title: Title
+      title: DEMS / Topography tools
       url: dems.html
+    - output: web,pdf
+      title: DEMS / Topography corrections
+      url: dem_corrections.html
     - output: web,pdf
       title: '`divdata` tools'
       url: divdata.html
