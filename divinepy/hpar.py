@@ -71,10 +71,10 @@ class HReader:
         H parameter map
     """
 
-    def __init__(self, lat_limit=None):
+    def __init__(self, lat_limit=None, other_path=None):
         self.lat_limit = lat_limit
-
-        arr = memmap_binary(hpar_path)
+        path = hpar_path if other_path is None else other_path
+        arr = memmap_binary(path)
         # dask array:
         a = da.from_array(arr)
         # replace NAN values with np.nan
