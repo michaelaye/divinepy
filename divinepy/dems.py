@@ -6,7 +6,7 @@ __all__ = ['root', 'datasets', 'LOLA_TOPO']
 import math
 from pathlib import Path
 
-import holoviews as hv
+import dask
 import hvplot.pandas  # noqa
 import hvplot.xarray  # noqa
 import numpy as np
@@ -14,15 +14,13 @@ import xarray as xr
 
 from divinepy import core
 
-hv.extension("bokeh")
-
 root = Path("/luna4/maye/dems")
 
 datasets = {
     "divgdr": {
-        "dem": "divgdr/ldem_128_topo_img.tif",
-        "slope": "divgdr/ldem_128_slope_img.tif",
-        "aspect": "divgdr/ldem_128_az_img.tif",
+        "dem": ("divgdr/ldem_128_topo_img.tif", "Elevation", "m"),
+        "slope": ("divgdr/ldem_128_slope_img.tif", "Slope", "deg"),
+        "aspect": ("divgdr/ldem_128_az_img.tif", "Aspect", "deg(north)"),
     }
 }
 
@@ -53,7 +51,7 @@ class LOLA_TOPO:
         self.fnames = datasets[dataset]
 
         # assign name attributes data/slope/aspect:
-        for key, fname in self.fnames.items():
+        for key, (fname, long_name, unit) in self.fnames.items():
             setattr(self, f"{key}_fpath", root / fname)
             setattr(self, key, core.raster_to_xarray(root / fname).squeeze(drop=True))
 
@@ -64,7 +62,7 @@ class LOLA_TOPO:
         #         lons = np.linspace(-180, 180, len(self.dem.x))
         lons = np.linspace(0, 360, len(self.dem.x), endpoint=False)
 
-        for key in self.fnames.keys():
+        for key, (_, long_name, unit) in self.fnames.items():
             o = getattr(self, key)
             o = o.assign_coords(lat=("y", lats))
             o = o.assign_coords(lon=("x", lons))
@@ -76,8 +74,11 @@ class LOLA_TOPO:
                 s = slice(self.lat_limit, -self.lat_limit)
                 o = o.sel(lat=s, drop=True)
             if self.dataset_name == "divgdr" and key == "aspect":
-                print("Aspect converted.")
-                o = np.mod(o+180, 360)
+                # change angles to surface normal angles
+                o = np.mod(o + 180, 360)
+            o.attrs["long_name"] = long_name
+            o.attrs["units"] = unit
+            o.name = key
             setattr(self, key, o)
 
     def slice_lat(self, data, lat):
@@ -93,19 +94,30 @@ class LOLA_TOPO:
         s = slice(lat, -lat)
         return getattr(self, data).sel(lat=s, drop=True)
 
-    def convert_to_180longitude(self):
+    def convert_to_lon180(self):
         "Switch all three maps to -180/180 longitude system."
         for data in ["dem", "slope", "aspect"]:
             p = getattr(self, data)
-            p.coords['lon'] = (((p.lon + 180) % 360) - 180)
-            setattr(self, data, p.sortby(p.lon))
+            p.coords["lon"] = ((p.lon + 180) % 360) - 180
+            with dask.config.set(**{"array.slicing.split_large_chunks": False}):
+                setattr(self, data, p.sortby(p.lon))
 
         # da.assign_coords(lon=(((da.lon + 180) % 360) - 180))
-    def convert_to_360longitude(self):
+
+    def convert_to_lon360(self):
         "Switch all three maps to 360 longitude system."
         for data in ["dem", "slope", "aspect"]:
             p = getattr(self, data)
-            p.coords['lon'] = p.coords['lon'] % 360
+            p.coords["lon"] = p.coords["lon"] % 360
+            with dask.config.set(**{"array.slicing.split_large_chunks": False}):
+                setattr(self, data, p.sortby(p.lon))
+
+    def assign_new_latlon(self, lat, lon):
+        "make sure longitude layout matches!"
+        for data in ["dem", "slope", "aspect"]:
+            p = getattr(self, data)
+            p.coords["lon"] = lon
+            p.coords["lat"] = lat
             setattr(self, data, p.sortby(p.lon))
 
     def get_elev_by_pixel(self, ilat, ilon):
@@ -115,17 +127,17 @@ class LOLA_TOPO:
 
     def get_elev_by_coord(self, lat, lon):
         "Note: Decided to not apply offset!"
-        val = self.dem.sel(lat=lat, lon=lon, method='nearest')
+        val = self.dem.sel(lat=lat, lon=lon, method="nearest")
         return float(val * self.dem_scale)
 
     def get_slope_by_pixel(self, ilat, ilon):
-        """Apply scale and return dimensonless rise/run slope."""
+        """Convert stored degrees into dimensionless rise/run slope."""
         val = self.slope.isel(lat=ilat, lon=ilon)
         return math.tan(math.radians(val))
 
     def get_slope_by_coord(self, lat, lon):
         """Apply scale and return dimensonless rise/run slope."""
-        val = self.slope.sel(lat=lat, lon=lon, method='nearest')
+        val = self.slope.sel(lat=lat, lon=lon, method="nearest")
         return math.tan(math.radians(val))
 
     def get_az_by_pixel(self, ilat, ilon):

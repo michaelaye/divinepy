@@ -3,10 +3,9 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"raster_to_xarray": "00_core.ipynb",
-         "mapcycle_to_xarray": "00_core.ipynb",
          "read_images_into_stacked_array": "00_core.ipynb",
+         "mapcycle_to_xarray": "00_core.ipynb",
          "read_mapcycles_into_stacked_array": "00_core.ipynb",
-         "get_data_for_pixel": "00_core.ipynb",
          "root": "04_l3data.ipynb",
          "datasets": "01_dems.ipynb",
          "LOLA_TOPO": "01_dems.ipynb",
@@ -20,14 +19,22 @@ index = {"raster_to_xarray": "00_core.ipynb",
          "L3DataManager": "04_l3data.ipynb",
          "get_l3_image_paths": "04_l3data.ipynb",
          "L3Data": "04_l3data.ipynb",
-         "STData": "04_l3data.ipynb"}
+         "STData": "04_l3data.ipynb",
+         "memmap_binary": "05_hpar.ipynb",
+         "read_hpar_binary": "05_hpar.ipynb",
+         "basepath": "05_hpar.ipynb",
+         "lons_path": "05_hpar.ipynb",
+         "lats_path": "05_hpar.ipynb",
+         "hpar_path": "05_hpar.ipynb",
+         "HReader": "05_hpar.ipynb"}
 
 modules = ["core.py",
            "dems.py",
            "dem_corrections.py",
            "divdata.py",
            "l2data.py",
-           "l3data.py"]
+           "l3data.py",
+           "hpar.py"]
 
 doc_url = "https://michaelaye.github.io/divinepy/"
 

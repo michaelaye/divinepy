@@ -11,22 +11,22 @@ entries:
       url: /
     - output: web,pdf
       title: Core reading utils
-      url: core.html
+      url: /core
     - output: web,pdf
       title: DEMS / Topography tools
-      url: dems.html
+      url: /dems
     - output: web,pdf
       title: DEMS / Topography corrections
-      url: dem_corrections.html
+      url: /dem_corrections
     - output: web,pdf
       title: '`divdata` tools'
-      url: divdata.html
+      url: /divdata
     - output: web,pdf
       title: L2 Data Interface
-      url: l2data.html
+      url: /l2data
     - output: web,pdf
       title: L3 Data
-      url: l3data.html
+      url: /l3data
     output: web
     title: divinepy
   output: web

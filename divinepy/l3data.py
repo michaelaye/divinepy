@@ -9,6 +9,7 @@ from pathlib import Path
 import numpy as np
 import pvl
 from planetarypy import geotools as gt
+import matplotlib.pyplot as plt
 from planetarypy.utils import url_retrieve
 from yarl import URL
 

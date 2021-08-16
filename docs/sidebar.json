@@ -1,11 +1,11 @@
 {
   "divinepy": {
     "Overview": "/",
-    "Core reading utils": "core.html",
-    "DEMS / Topography tools": "dems.html",
-    "DEMS / Topography corrections": "dem_corrections.html",
-    "`divdata` tools": "divdata.html",
-    "L2 Data Interface": "l2data.html",
-    "L3 Data": "l3data.html"
+    "Core reading utils": "/core",
+    "DEMS / Topography tools": "/dems",
+    "DEMS / Topography corrections": "/dem_corrections",
+    "`divdata` tools": "/divdata",
+    "L2 Data Interface": "/l2data",
+    "L3 Data": "/l3data"
   }
 }

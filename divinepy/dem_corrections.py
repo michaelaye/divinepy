@@ -34,7 +34,7 @@ def lat_prime(lat, slope, az):
 
     Parameters
     ----------
-    lat: float
+    lat: float(deg)
         Latitude of Diviner measurement
     slope: float
         Dimensionless surface slope rise/run, i.e. slope[%] * 100

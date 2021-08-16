@@ -2,7 +2,6 @@
 
 title: DEMS / Topography corrections
 
-
 keywords: fastai
 sidebar: home_sidebar
 
@@ -22,6 +21,13 @@ nb_path: "01a_dem_corrections.ipynb"
 
 <div class="container" id="notebook-container">
         
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -93,7 +99,7 @@ float: Effective local time</code></pre>
 
 Parameters
 ----------
-lat: float
+lat: float(deg)
     Latitude of Diviner measurement
 slope: float
     Dimensionless surface slope rise/run, i.e. slope[%] * 100
@@ -110,13 +116,6 @@ float: Effective latitude</code></pre>
 
 </div>
 </div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}
@@ -235,45 +234,6 @@ float: Effective latitude</code></pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.export</span> <span class="kn">import</span> <span class="n">notebook2script</span>
-
-<span class="n">notebook2script</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted 00_core.ipynb.
-Converted 01_dems.ipynb.
-Converted 01a_dem_corrections.ipynb.
-Converted 02_divdata.ipynb.
-Converted 03_l2data.ipynb.
-Converted 04_l3data.ipynb.
-Converted index.ipynb.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
