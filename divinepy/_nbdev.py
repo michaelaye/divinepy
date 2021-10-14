@@ -26,7 +26,8 @@ index = {"raster_to_xarray": "00_core.ipynb",
          "lons_path": "05_hpar.ipynb",
          "lats_path": "05_hpar.ipynb",
          "hpar_path": "05_hpar.ipynb",
-         "HReader": "05_hpar.ipynb"}
+         "HReader": "05_hpar.ipynb",
+         "base_url_1": "06_l1a_data.ipynb"}
 
 modules = ["core.py",
            "dems.py",
@@ -34,7 +35,8 @@ modules = ["core.py",
            "divdata.py",
            "l2data.py",
            "l3data.py",
-           "hpar.py"]
+           "hpar.py",
+           "l1a.py"]
 
 doc_url = "https://michaelaye.github.io/divinepy/"
 

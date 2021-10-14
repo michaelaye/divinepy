@@ -11,9 +11,10 @@ import hvplot.pandas  # noqa
 import hvplot.xarray  # noqa
 import numpy as np
 import xarray as xr
-
+import holoviews as hv
 from divinepy import core
 
+hv.extension('bokeh')
 root = Path("/luna4/maye/dems")
 
 datasets = {
