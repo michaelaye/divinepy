@@ -13,17 +13,17 @@ The provided tools are based primarily on publicly available LRO Diviner and rel
 ## LOLA DEMS
 See the DEMS / Topography tools for more details.
 
-```python
+```
 from divinepy.dems import LOLA_TOPO
 ```
 
-```python
+```
 topo = LOLA_TOPO()
 ```
 
 ### Available data objects in LOLA_TOPO
 
-```python
+```
 topo.dem
 ```
 
@@ -488,7 +488,7 @@ Attributes: (12/19)
 
 
 
-```python
+```
 topo.slope
 ```
 
@@ -953,7 +953,7 @@ Attributes: (12/19)
 
 
 
-```python
+```
 topo.aspect
 ```
 
@@ -1409,12 +1409,12 @@ Attributes:
 
 ### Plotting slices
 
-```python
+```
 lat = 20
 lon = 131
 ```
 
-```python
+```
 topo.plot_dem(lat, lon)
 ```
 
@@ -1458,7 +1458,7 @@ topo.plot_dem(lat, lon)
 
 
 
-```python
+```
 topo.plot_slope(lat, lon)
 ```
 
@@ -1502,7 +1502,7 @@ topo.plot_slope(lat, lon)
 
 
 
-```python
+```
 topo.plot_aspect(lat, lon)
 ```
 
@@ -1548,7 +1548,7 @@ topo.plot_aspect(lat, lon)
 
 ### Combining plots
 
-```python
+```
 (topo.plot_dem(lat, lon, dlon=2) + topo.plot_slope(lat, lon, dlon=2)).cols(1)
 ```
 

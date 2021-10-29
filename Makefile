@@ -22,8 +22,12 @@ test:
 	nbdev_test_nbs
 
 release: pypi
-	nbdev_conda_package
-	nbdev_bump_version
+	sleep 5
+	conda
+	fastrelease_bump_version
+
+conda:
+	fastrelease_conda_package --mambabuild --upload_user michaelaye
 
 pypi: dist
 	twine upload --repository pypi dist/*

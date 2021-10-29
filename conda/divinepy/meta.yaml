@@ -1,0 +1,42 @@
+package:
+  name: divinepy
+  version: 0.2.0
+source:
+  sha256: 400c8a135dd48e00945a468b462a932ef15615b271600749cd384b17e6fbac61
+  url: https://files.pythonhosted.org/packages/cd/a3/81772c5b30a379a8ded20251bb9e7429262f06d1ed39d2cb8813fc8e0b6e/divinepy-0.2.0.tar.gz
+about:
+  dev_url: https://michaelaye.github.io
+  doc_url: https://michaelaye.github.io
+  home: https://michaelaye.github.io
+  license: Apache Software
+  license_family: APACHE
+  summary: Diviner data tools
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - michaelaye
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  - pandas
+  - xarray
+  - rasterio
+  - dask
+  - hvplot
+  run:
+  - pip
+  - python
+  - packaging
+  - pandas
+  - xarray
+  - rasterio
+  - dask
+  - hvplot
+test:
+  imports:
+  - divinepy

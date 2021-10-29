@@ -34,10 +34,10 @@ nb_path: "06_l1a_data.ipynb"
 
 
 
-<div id="7ac7c82b-6633-4fff-ac5a-27e81473a97e"></div>
+<div id="7d70a100-2f1f-4bce-b4e4-4d8f14e8610f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#7ac7c82b-6633-4fff-ac5a-27e81473a97e');
+var element = $('#7d70a100-2f1f-4bce-b4e4-4d8f14e8610f');
 
 (function(root) {
   function now() {
@@ -1675,10 +1675,10 @@ var element = $('#7ac7c82b-6633-4fff-ac5a-27e81473a97e');
 
 
 
-<div id="e4d65183-6429-40e5-ab44-278704e207b3"></div>
+<div id="426ce07d-c9c2-4c1e-b746-c70f9c02a58e"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#e4d65183-6429-40e5-ab44-278704e207b3');
+var element = $('#426ce07d-c9c2-4c1e-b746-c70f9c02a58e');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -2035,27 +2035,6 @@ roTBs2RqAAAAAElFTkSuQmCC'
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">timestring_to_url</span><span class="p">(</span><span class="n">tstr</span><span class="p">):</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="n">tstr</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
-    <span class="n">yearmonth</span> <span class="o">=</span> <span class="n">tstr</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
-    <span class="n">yearmonthday</span> <span class="o">=</span> <span class="n">tstr</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">base_url</span> <span class="o">/</span> <span class="n">year</span> <span class="o">/</span> <span class="n">yearmonth</span> <span class="o">/</span> <span class="n">yearmonthday</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tstr</span><span class="si">}</span><span class="s2">_edr.tab&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tstr</span> <span class="o">=</span> <span class="s2">&quot;2010010114&quot;</span>
 </pre></div>
 
@@ -2073,7 +2052,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">timestring_to_url</span><span class="p">(</span><span class="n">tstr</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fu</span><span class="o">.</span><span class="n">get_dirty_l1a</span><span class="p">(</span><span class="n">tstr</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2086,38 +2065,321 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>URL(&#39;https://pds-geosciences.wustl.edu/lro/lro-l-dlre-2-edr-v1/lrodlr_0001/data/2010/201001/20100101/2010010114_edr.tab&#39;)</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>q</th>
+      <th>sclk</th>
+      <th>sounding</th>
+      <th>from_pkt</th>
+      <th>pkt_count</th>
+      <th>safing</th>
+      <th>safed</th>
+      <th>freezing</th>
+      <th>frozen</th>
+      <th>rolling</th>
+      <th>...</th>
+      <th>b3_12</th>
+      <th>b3_13</th>
+      <th>b3_14</th>
+      <th>b3_15</th>
+      <th>b3_16</th>
+      <th>b3_17</th>
+      <th>b3_18</th>
+      <th>b3_19</th>
+      <th>b3_20</th>
+      <th>b3_21</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-01-01 14:00:00.712</th>
+      <td>0</td>
+      <td>2.840472e+08</td>
+      <td>1</td>
+      <td>10561</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27544</td>
+      <td>27565</td>
+      <td>27569</td>
+      <td>27523</td>
+      <td>27552</td>
+      <td>27556</td>
+      <td>27532</td>
+      <td>27551</td>
+      <td>27575</td>
+      <td>27556</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 14:00:00.840</th>
+      <td>0</td>
+      <td>2.840472e+08</td>
+      <td>2</td>
+      <td>10561</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27546</td>
+      <td>27571</td>
+      <td>27566</td>
+      <td>27526</td>
+      <td>27547</td>
+      <td>27557</td>
+      <td>27528</td>
+      <td>27545</td>
+      <td>27578</td>
+      <td>27554</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 14:00:00.968</th>
+      <td>0</td>
+      <td>2.840472e+08</td>
+      <td>3</td>
+      <td>10562</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27551</td>
+      <td>27571</td>
+      <td>27568</td>
+      <td>27523</td>
+      <td>27555</td>
+      <td>27555</td>
+      <td>27527</td>
+      <td>27547</td>
+      <td>27578</td>
+      <td>27553</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 14:00:01.096</th>
+      <td>0</td>
+      <td>2.840472e+08</td>
+      <td>4</td>
+      <td>10562</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27549</td>
+      <td>27568</td>
+      <td>27567</td>
+      <td>27524</td>
+      <td>27547</td>
+      <td>27553</td>
+      <td>27531</td>
+      <td>27545</td>
+      <td>27576</td>
+      <td>27554</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 14:00:01.224</th>
+      <td>0</td>
+      <td>2.840472e+08</td>
+      <td>5</td>
+      <td>10563</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27548</td>
+      <td>27569</td>
+      <td>27564</td>
+      <td>27524</td>
+      <td>27551</td>
+      <td>27551</td>
+      <td>27525</td>
+      <td>27547</td>
+      <td>27573</td>
+      <td>27558</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 15:00:00.544</th>
+      <td>0</td>
+      <td>2.840508e+08</td>
+      <td>12</td>
+      <td>11753</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27529</td>
+      <td>27529</td>
+      <td>27545</td>
+      <td>27509</td>
+      <td>27530</td>
+      <td>27526</td>
+      <td>27493</td>
+      <td>27507</td>
+      <td>27538</td>
+      <td>27519</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 15:00:00.672</th>
+      <td>0</td>
+      <td>2.840508e+08</td>
+      <td>13</td>
+      <td>11754</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27523</td>
+      <td>27532</td>
+      <td>27539</td>
+      <td>27506</td>
+      <td>27535</td>
+      <td>27531</td>
+      <td>27498</td>
+      <td>27511</td>
+      <td>27541</td>
+      <td>27525</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 15:00:00.800</th>
+      <td>0</td>
+      <td>2.840508e+08</td>
+      <td>14</td>
+      <td>11754</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27523</td>
+      <td>27538</td>
+      <td>27540</td>
+      <td>27498</td>
+      <td>27529</td>
+      <td>27531</td>
+      <td>27501</td>
+      <td>27515</td>
+      <td>27548</td>
+      <td>27530</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 15:00:00.928</th>
+      <td>0</td>
+      <td>2.840508e+08</td>
+      <td>15</td>
+      <td>11755</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27524</td>
+      <td>27541</td>
+      <td>27541</td>
+      <td>27498</td>
+      <td>27524</td>
+      <td>27530</td>
+      <td>27498</td>
+      <td>27524</td>
+      <td>27557</td>
+      <td>27536</td>
+    </tr>
+    <tr>
+      <th>2010-01-01 15:00:01.056</th>
+      <td>0</td>
+      <td>2.840508e+08</td>
+      <td>16</td>
+      <td>11756</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27520</td>
+      <td>27536</td>
+      <td>27544</td>
+      <td>27493</td>
+      <td>27519</td>
+      <td>27526</td>
+      <td>27500</td>
+      <td>27530</td>
+      <td>27562</td>
+      <td>27550</td>
+    </tr>
+  </tbody>
+</table>
+<p>28128 rows × 246 columns</p>
+</div>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read_l1a_data</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">parsers</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
-        <span class="n">fname</span><span class="p">,</span>
-        <span class="n">names</span><span class="o">=</span><span class="n">L1AHeader</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
-        <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;-9999&quot;</span><span class="p">,</span>
-        <span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-        <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">parse_times</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -2135,23 +2397,9 @@ roTBs2RqAAAAAElFTkSuQmCC'
     <span class="s2">&quot;Q, DATE, UTC, SCLK, SOUNDING, FROM_PKT, PKT_COUNT, SAFING, SAFED, FREEZING, FROZEN, ROLLING, DUMPING, MOVING, TEMP_FAULT,   SC_TIME_SECS,   SC_TIME_SUBS, TICKS_PKT_START, TICKS_AT_SC_TIME, OST_INDEX, EST_INDEX, SST_INDEX, LAST_AZ_CMD, LAST_EL_CMD, FPA_TEMP, FPB_TEMP, BAFFLE_A_TEMP, BAFFLE_B_TEMP, BB_1_TEMP, OBA_1_TEMP, ERROR_TIME, ERROR_ID,  ERROR_DETAIL , ERROR_COUNT, COMMANDS_RECEIVED, COMMANDS_EXECUTED, COMMANDS_REJECTED,    LAST_COMMAND_REC ,      CMD,  REQ_ID , LAST_TIME_COMMAND, LAST_EQX_PREDICTION, HYBRID_TEMP, FPA_TEMP_CYC, FPB_TEMP_CYC, BAFFLE_A_TEMP_CYC, BAFFLE_B_TEMP_CYC, OBA_1_TEMP_CYC, OBA_2_TEMP, BB_1_TEMP_CYC, BB_2_TEMP, SOLAR_TARGET_TEMP, YOKE_TEMP, EL_ACTUATOR_TEMP, AZ_ACTUATOR_TEMP,  MIN_15V, PLU_15V, SOLAR_BASE_TEMP, PLU_5V, &quot;</span>
     <span class="s2">&quot;A1_01, A1_02, A1_03, A1_04, A1_05, A1_06, A1_07, A1_08, A1_09, A1_10, A1_11, A1_12, A1_13, A1_14, A1_15, A1_16, A1_17, A1_18, A1_19, A1_20, A1_21, A2_01, A2_02, A2_03, A2_04, A2_05, A2_06, A2_07, A2_08, A2_09, A2_10, A2_11, A2_12, A2_13, A2_14, A2_15, A2_16, A2_17, A2_18, A2_19, A2_20, A2_21, A3_01, A3_02, A3_03, A3_04, A3_05, A3_06, A3_07, A3_08, A3_09, A3_10, A3_11, A3_12, A3_13, A3_14, A3_15, A3_16, A3_17, A3_18, A3_19, A3_20, A3_21, A4_01, A4_02, A4_03, A4_04, A4_05, A4_06, A4_07, A4_08, A4_09, A4_10, A4_11, A4_12, A4_13, A4_14, A4_15, A4_16, A4_17, A4_18, A4_19, A4_20, A4_21, A5_01, A5_02, A5_03, A5_04, A5_05, A5_06, A5_07, A5_08, A5_09, A5_10, A5_11, A5_12, A5_13, A5_14, A5_15, A5_16, A5_17, A5_18, A5_19, A5_20, A5_21, A6_01, A6_02, A6_03, A6_04, A6_05, A6_06, A6_07, A6_08, A6_09, A6_10, A6_11, A6_12, A6_13, A6_14, A6_15, A6_16, A6_17, A6_18, A6_19, A6_20, A6_21, B1_01, B1_02, B1_03, B1_04, B1_05, B1_06, B1_07, B1_08, B1_09, B1_10, B1_11, B1_12, B1_13, B1_14, B1_15, B1_16, B1_17, B1_18, B1_19, B1_20, B1_21, B2_01, B2_02, B2_03, B2_04, B2_05, B2_06, B2_07, B2_08, B2_09, B2_10, B2_11, B2_12, B2_13, B2_14, B2_15, B2_16, B2_17, B2_18, B2_19, B2_20, B2_21, B3_01, B3_02, B3_03, B3_04, B3_05, B3_06, B3_07, B3_08, B3_09, B3_10, B3_11, B3_12, B3_13, B3_14, B3_15, B3_16, B3_17, B3_18, B3_19, B3_20, B3_21&quot;</span>
 <span class="p">)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">parse_header_line</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">parse_header_line</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Parse header lines.</span>
 
 <span class="sd">    &gt;&gt;&gt; s = &#39; a   b  c    &#39;</span>
@@ -2184,9 +2432,241 @@ roTBs2RqAAAAAElFTkSuQmCC'
 
     <span class="n">metadatacols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">datacols</span><span class="p">))</span>
     <span class="n">metadatacols</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">read_l1a_data</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">parsers</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">fname</span><span class="p">,</span>
+        <span class="n">names</span><span class="o">=</span><span class="n">L1AHeader</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+        <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;-9999&quot;</span><span class="p">,</span>
+        <span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+        <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">parse_times</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1AHeader</span><span class="o">.</span><span class="n">datacols</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;a1_01&#39;,
+ &#39;a1_02&#39;,
+ &#39;a1_03&#39;,
+ &#39;a1_04&#39;,
+ &#39;a1_05&#39;,
+ &#39;a1_06&#39;,
+ &#39;a1_07&#39;,
+ &#39;a1_08&#39;,
+ &#39;a1_09&#39;,
+ &#39;a1_10&#39;,
+ &#39;a1_11&#39;,
+ &#39;a1_12&#39;,
+ &#39;a1_13&#39;,
+ &#39;a1_14&#39;,
+ &#39;a1_15&#39;,
+ &#39;a1_16&#39;,
+ &#39;a1_17&#39;,
+ &#39;a1_18&#39;,
+ &#39;a1_19&#39;,
+ &#39;a1_20&#39;,
+ &#39;a1_21&#39;,
+ &#39;a2_01&#39;,
+ &#39;a2_02&#39;,
+ &#39;a2_03&#39;,
+ &#39;a2_04&#39;,
+ &#39;a2_05&#39;,
+ &#39;a2_06&#39;,
+ &#39;a2_07&#39;,
+ &#39;a2_08&#39;,
+ &#39;a2_09&#39;,
+ &#39;a2_10&#39;,
+ &#39;a2_11&#39;,
+ &#39;a2_12&#39;,
+ &#39;a2_13&#39;,
+ &#39;a2_14&#39;,
+ &#39;a2_15&#39;,
+ &#39;a2_16&#39;,
+ &#39;a2_17&#39;,
+ &#39;a2_18&#39;,
+ &#39;a2_19&#39;,
+ &#39;a2_20&#39;,
+ &#39;a2_21&#39;,
+ &#39;a3_01&#39;,
+ &#39;a3_02&#39;,
+ &#39;a3_03&#39;,
+ &#39;a3_04&#39;,
+ &#39;a3_05&#39;,
+ &#39;a3_06&#39;,
+ &#39;a3_07&#39;,
+ &#39;a3_08&#39;,
+ &#39;a3_09&#39;,
+ &#39;a3_10&#39;,
+ &#39;a3_11&#39;,
+ &#39;a3_12&#39;,
+ &#39;a3_13&#39;,
+ &#39;a3_14&#39;,
+ &#39;a3_15&#39;,
+ &#39;a3_16&#39;,
+ &#39;a3_17&#39;,
+ &#39;a3_18&#39;,
+ &#39;a3_19&#39;,
+ &#39;a3_20&#39;,
+ &#39;a3_21&#39;,
+ &#39;a4_01&#39;,
+ &#39;a4_02&#39;,
+ &#39;a4_03&#39;,
+ &#39;a4_04&#39;,
+ &#39;a4_05&#39;,
+ &#39;a4_06&#39;,
+ &#39;a4_07&#39;,
+ &#39;a4_08&#39;,
+ &#39;a4_09&#39;,
+ &#39;a4_10&#39;,
+ &#39;a4_11&#39;,
+ &#39;a4_12&#39;,
+ &#39;a4_13&#39;,
+ &#39;a4_14&#39;,
+ &#39;a4_15&#39;,
+ &#39;a4_16&#39;,
+ &#39;a4_17&#39;,
+ &#39;a4_18&#39;,
+ &#39;a4_19&#39;,
+ &#39;a4_20&#39;,
+ &#39;a4_21&#39;,
+ &#39;a5_01&#39;,
+ &#39;a5_02&#39;,
+ &#39;a5_03&#39;,
+ &#39;a5_04&#39;,
+ &#39;a5_05&#39;,
+ &#39;a5_06&#39;,
+ &#39;a5_07&#39;,
+ &#39;a5_08&#39;,
+ &#39;a5_09&#39;,
+ &#39;a5_10&#39;,
+ &#39;a5_11&#39;,
+ &#39;a5_12&#39;,
+ &#39;a5_13&#39;,
+ &#39;a5_14&#39;,
+ &#39;a5_15&#39;,
+ &#39;a5_16&#39;,
+ &#39;a5_17&#39;,
+ &#39;a5_18&#39;,
+ &#39;a5_19&#39;,
+ &#39;a5_20&#39;,
+ &#39;a5_21&#39;,
+ &#39;a6_01&#39;,
+ &#39;a6_02&#39;,
+ &#39;a6_03&#39;,
+ &#39;a6_04&#39;,
+ &#39;a6_05&#39;,
+ &#39;a6_06&#39;,
+ &#39;a6_07&#39;,
+ &#39;a6_08&#39;,
+ &#39;a6_09&#39;,
+ &#39;a6_10&#39;,
+ &#39;a6_11&#39;,
+ &#39;a6_12&#39;,
+ &#39;a6_13&#39;,
+ &#39;a6_14&#39;,
+ &#39;a6_15&#39;,
+ &#39;a6_16&#39;,
+ &#39;a6_17&#39;,
+ &#39;a6_18&#39;,
+ &#39;a6_19&#39;,
+ &#39;a6_20&#39;,
+ &#39;a6_21&#39;,
+ &#39;b1_01&#39;,
+ &#39;b1_02&#39;,
+ &#39;b1_03&#39;,
+ &#39;b1_04&#39;,
+ &#39;b1_05&#39;,
+ &#39;b1_06&#39;,
+ &#39;b1_07&#39;,
+ &#39;b1_08&#39;,
+ &#39;b1_09&#39;,
+ &#39;b1_10&#39;,
+ &#39;b1_11&#39;,
+ &#39;b1_12&#39;,
+ &#39;b1_13&#39;,
+ &#39;b1_14&#39;,
+ &#39;b1_15&#39;,
+ &#39;b1_16&#39;,
+ &#39;b1_17&#39;,
+ &#39;b1_18&#39;,
+ &#39;b1_19&#39;,
+ &#39;b1_20&#39;,
+ &#39;b1_21&#39;,
+ &#39;b2_01&#39;,
+ &#39;b2_02&#39;,
+ &#39;b2_03&#39;,
+ &#39;b2_04&#39;,
+ &#39;b2_05&#39;,
+ &#39;b2_06&#39;,
+ &#39;b2_07&#39;,
+ &#39;b2_08&#39;,
+ &#39;b2_09&#39;,
+ &#39;b2_10&#39;,
+ &#39;b2_11&#39;,
+ &#39;b2_12&#39;,
+ &#39;b2_13&#39;,
+ &#39;b2_14&#39;,
+ &#39;b2_15&#39;,
+ &#39;b2_16&#39;,
+ &#39;b2_17&#39;,
+ &#39;b2_18&#39;,
+ &#39;b2_19&#39;,
+ &#39;b2_20&#39;,
+ &#39;b2_21&#39;,
+ &#39;b3_01&#39;,
+ &#39;b3_02&#39;,
+ &#39;b3_03&#39;,
+ &#39;b3_04&#39;,
+ &#39;b3_05&#39;,
+ &#39;b3_06&#39;,
+ &#39;b3_07&#39;,
+ &#39;b3_08&#39;,
+ &#39;b3_09&#39;,
+ &#39;b3_10&#39;,
+ &#39;b3_11&#39;,
+ &#39;b3_12&#39;,
+ &#39;b3_13&#39;,
+ &#39;b3_14&#39;,
+ &#39;b3_15&#39;,
+ &#39;b3_16&#39;,
+ &#39;b3_17&#39;,
+ &#39;b3_18&#39;,
+ &#39;b3_19&#39;,
+ &#39;b3_20&#39;,
+ &#39;b3_21&#39;]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2319,7 +2799,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">L1ADataFile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fname</span> <span class="o">=</span> <span class="n">fname</span>
-<span class="c1">#         self.fn_handler = FileName(fname)</span>
+        <span class="c1">#         self.fn_handler = FileName(fname)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">L1AHeader</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -2336,10 +2816,10 @@ roTBs2RqAAAAAElFTkSuQmCC'
     <span class="k">def</span> <span class="nf">parse_times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">parse_times</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
-<span class="c1">#     def clean(self, df):</span>
-<span class="c1">#         df = prepare_data(df)</span>
-<span class="c1">#         define_sdtype(df)</span>
-<span class="c1">#         return df</span>
+    <span class="c1">#     def clean(self, df):</span>
+    <span class="c1">#         df = prepare_data(df)</span>
+    <span class="c1">#         define_sdtype(df)</span>
+    <span class="c1">#         return df</span>
 
     <span class="k">def</span> <span class="nf">open_dirty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_dirty</span><span class="p">()</span>

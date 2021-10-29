@@ -26,8 +26,7 @@ index = {"raster_to_xarray": "00_core.ipynb",
          "lons_path": "05_hpar.ipynb",
          "lats_path": "05_hpar.ipynb",
          "hpar_path": "05_hpar.ipynb",
-         "HReader": "05_hpar.ipynb",
-         "base_url_1": "06_l1a_data.ipynb"}
+         "HReader": "05_hpar.ipynb"}
 
 modules = ["core.py",
            "dems.py",
