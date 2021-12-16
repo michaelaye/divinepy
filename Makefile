@@ -23,11 +23,7 @@ test:
 
 release: pypi
 	sleep 5
-	conda
-	fastrelease_bump_version
-
-conda:
-	fastrelease_conda_package --mambabuild --upload_user michaelaye
+	fastrelease_conda_package --mambabuild --upload_user michaelaye && fastrelease_bump_version
 
 pypi: dist
 	twine upload --repository pypi dist/*

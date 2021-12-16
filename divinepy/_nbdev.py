@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"raster_to_xarray": "00_core.ipynb",
+index = {"hostname": "00_core.ipynb",
+         "raster_to_xarray": "00_core.ipynb",
          "read_images_into_stacked_array": "00_core.ipynb",
          "mapcycle_to_xarray": "00_core.ipynb",
          "read_mapcycles_into_stacked_array": "00_core.ipynb",
@@ -26,6 +27,7 @@ index = {"raster_to_xarray": "00_core.ipynb",
          "lons_path": "05_hpar.ipynb",
          "lats_path": "05_hpar.ipynb",
          "hpar_path": "05_hpar.ipynb",
+         "half_pixel_degree": "05_hpar.ipynb",
          "HReader": "05_hpar.ipynb"}
 
 modules = ["core.py",

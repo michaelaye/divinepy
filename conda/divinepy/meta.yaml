@@ -1,9 +1,9 @@
 package:
   name: divinepy
-  version: 0.2.0
+  version: 0.3.0
 source:
-  sha256: 400c8a135dd48e00945a468b462a932ef15615b271600749cd384b17e6fbac61
-  url: https://files.pythonhosted.org/packages/cd/a3/81772c5b30a379a8ded20251bb9e7429262f06d1ed39d2cb8813fc8e0b6e/divinepy-0.2.0.tar.gz
+  sha256: 40490ae968d2a8ae4cbb2ba9ddcbdc619479d855f01f21fb536c8d845635a7da
+  url: https://files.pythonhosted.org/packages/70/17/47150aeccadda7b221d130638d6876b4905a6b1c6ce22f1d01035e9ca787/divinepy-0.3.0.tar.gz
 about:
   dev_url: https://michaelaye.github.io
   doc_url: https://michaelaye.github.io
